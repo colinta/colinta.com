@@ -1,0 +1,10 @@
+---
+is_page: false
+---
+# robots.txt for all bots
+User-Agent: *
+Allow: /
+Allow: /static/image/
+Allow: /static/pdf/
+Disallow: /static/js/
+Disallow: /static/css/

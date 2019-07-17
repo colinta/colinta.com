@@ -1,0 +1,2 @@
+strip_metadata_from_name: true
+strip_metadata_from_target_name: false

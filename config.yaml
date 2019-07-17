@@ -1,0 +1,34 @@
+deploy_path: /var/www/colinta
+host: http://colinta.com
+strip_metadata_from_name: true
+strip_metadata_from_target_name: true
+meta:
+  analytics: 'UA-15076738-1'
+  title: 'code by colinta'
+  description: ''
+author:
+  name: Colin T.A. Gray
+  email: colinta@gmail.com
+  github: https://github.com/colinta
+  twitter: colinta
+extensions:
+  - strange_case.extensions.misaka.MarkdownExtension
+filters:
+  date: strange_case.extensions.date.date
+  markdown: strange_case.extensions.misaka.markdown
+  json: json.dumps
+  sha: strange_case.extensions.hashlib.sha
+  md5: strange_case.extensions.hashlib.md5
+  pluralize: strange_case.extensions.inflect.pluralize
+processors:
+  - strange_case.extensions.image
+  - strange_case.extensions.category
+  - strange_case.extensions.paginated
+  - strange_case.extensions.scss
+media:
+  mom_video:
+    title: "Mom's Graduation Video, with Laughtrack"
+    created_at: !!timestamp '2012-05-12 09:59:11.399040'
+    poster: http://media.colinta.com/mom-video-with-laughtrack.png
+    mp4: http://media.colinta.com/mom-video-with-laughtrack.mp4
+    webm: http://media.colinta.com/mom-video-with-laughtrack.webm

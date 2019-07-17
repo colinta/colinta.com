@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -razv --delete --exclude=".DS_Store" --exclude=".git" '/var/www/colinta/' 'colinta@colinta.com:/srv/colinta.com/'

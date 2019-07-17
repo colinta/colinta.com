@@ -1,0 +1,51 @@
+doctype(5)
+html(lang="en"):
+  head:
+    meta(charset="utf-8")
+    block 'starthead'
+    meta(name="msvalidate.01", content="F554F2A760879404A50FF33189AEEB35")
+    link(href="/static/css/subl.css", rel="stylesheet")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut, icon", href="/static/image/favicon.ico")
+    link(rel="apple-touch-icon", href="/static/image/apple-touch-icon.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/static/image/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/static/image/apple-touch-icon-114x114.png")
+    link(rel="alternate", type="application/rss+xml", title="stuff by colinta", href="/feed.xml")
+    block 'seometadata':
+        title:
+            block 'title':
+                if my.title:
+                    my.title + ' | ' + my.meta.title
+                else:
+                    my.meta.title
+        meta(name="description", content=my.meta.description)
+        meta(name="author", content=my.author.name)
+    block 'analytics':
+        include 'includes/analytics'
+    block 'endhead'
+body:
+    section.top:
+        h1: my.title + e(" — ") + my.header
+    section.left-nav:
+        h1: "OPEN FILES"
+        ul.open-files:
+            li:
+                span.li-sym: img(src="/static/img/icon-file.png", width=20, height=20)
+                my.title
+        h1: "FOLDERS"
+        ul.folders:
+            li:
+                "▸"
+                img.li-sym(src="/static/img/icon-folder-closed.png", width=20, height=20)
+                "blog"
+            li:
+                "▾"
+                img.li-sym(src="/static/img/icon-folder-open.png", width=20, height=20)
+                "images"
+            li:
+                img.li-sym(src="/static/img/icon-file.png", width=20, height=20)
+                a(href="/"): "README.md"
+    section.main:
+        code:
+            yield
+        br
