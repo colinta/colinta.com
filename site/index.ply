@@ -1,6 +1,6 @@
 my.title = "colinta"
 my.header = "projects, blogs, and whatnot"
-my.meta['description'] = "projects, blogs, and whatnot"
+my.description = "projects, blogs, and whatnot"
 
 
 extends 'layouts/subl':

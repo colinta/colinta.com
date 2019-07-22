@@ -213,4 +213,9 @@ section.main span.line::before {
   padding-right: 15pt;
   text-align: right;
   align-self: flex-end;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }

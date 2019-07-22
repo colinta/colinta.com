@@ -18,7 +18,7 @@ html(lang="en"):
                     my.title + ' | ' + my.meta.title
                 else:
                     my.meta.title
-        meta(name="description", content=my.meta.description)
+        meta(name="description", content=my.description)
         meta(name="author", content=my.author.name)
     block 'analytics':
         include 'includes/analytics'
@@ -38,13 +38,13 @@ body:
                 "▸"
                 img.li-sym(src="/static/img/icon-folder-closed.png", width=20, height=20)
                 "blog"
-            li:
-                "▾"
-                img.li-sym(src="/static/img/icon-folder-open.png", width=20, height=20)
-                "images"
+            # li:
+            #     "▾"
+            #     img.li-sym(src="/static/img/icon-folder-open.png", width=20, height=20)
+            #     "images"
             li:
                 img.li-sym(src="/static/img/icon-file.png", width=20, height=20)
-                a(href="/"): "README.md"
+                a(href="https://github.com/colinta/colinta.com"): "README.md"
     section.main:
         code:
             yield
