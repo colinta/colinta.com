@@ -1,0 +1,3 @@
+extends 'layouts/subl':
+    section.max-width:
+        yield

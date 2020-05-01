@@ -1,0 +1,45 @@
+my.title = "code exercises"
+my.description = "personal thoughts on the pros and cons of code exercises"
+my.posted_date = "April 30, 2020"
+
+
+extends 'layouts/blog':
+    markdown:
+        """markdown
+        I've given and taken a few “code challenges” over the years, and I have
+        found myself growing increasingly resentful towards the practice.
+        Here's my thinking:
+
+        First: Time Commitment.  Ideally the exercise covers a decent surface
+        area; for instance a full stack role should be tested on backend and
+        frontend development.  A small demo project that has a candidate build
+        something that tests these core competences could easily take 6 hours.
+        So just by having this kind of challenge as part of your hiring process,
+        you are cutting out candidates who do not have this much spare time on
+        their hands.
+
+        Second: Providing useful metrics.  I took a programming challenge once
+        that focused on _dates_, which has the terrible quality that the more
+        you know about dates the _worse_ you would do.  Should these date
+        functions support the missing days (which varies by country) when the
+        world transitioned from the Julian to Gregorian calendar?  Should it
+        account for leap seconds (which even our "perfect" Unix time system
+        struggles with)?  And is this really a *core competency* that you want
+        to measure?
+
+        Third: Unit testing vs Integration testing.  Testing a candidate's
+        coding ability doesn't really measure whether they will be a good
+        _employee_, because it puts them in isolation, it doesn't provide any
+        measure of how they would behave in a real-world work environment.
+
+        So what to do instead?  I think that code exercises should be
+        _discussed_.  I want to hire someone that can problem solve, or someone
+        that can work well with other people to problem solve.  If they are
+        super bright and knowledgeable I think that will be fairly obvious.  And
+        if they are egomaniacal "My-way-or-you're-just-wrong" kind of brogrammer
+        then hopefully that emerges, too.
+
+        And since you are spending your own precious time for the interview, you
+        are at least respecting your candidates' time committment, and you will
+        be incentivized to minimize the amount of time wasted.
+        """

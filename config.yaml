@@ -1,5 +1,5 @@
 deploy_path: /var/www/colinta
-host: http://colinta.com
+host: https://colinta.com
 strip_metadata_from_name: true
 strip_metadata_from_target_name: true
 meta:
@@ -11,8 +11,6 @@ author:
   email: colinta@gmail.com
   github: https://github.com/colinta
   twitter: colinta
-extensions:
-  - strange_case.extensions.misaka.MarkdownExtension
 filters:
   date: strange_case.extensions.date.date
   markdown: strange_case.extensions.misaka.markdown
@@ -22,13 +20,7 @@ filters:
   pluralize: strange_case.extensions.inflect.pluralize
 processors:
   - strange_case.extensions.image
-  - strange_case.extensions.category
-  - strange_case.extensions.paginated
   - strange_case.extensions.scss
-media:
-  mom_video:
-    title: "Mom's Graduation Video, with Laughtrack"
-    created_at: !!timestamp '2012-05-12 09:59:11.399040'
-    poster: http://media.colinta.com/mom-video-with-laughtrack.png
-    mp4: http://media.colinta.com/mom-video-with-laughtrack.mp4
-    webm: http://media.colinta.com/mom-video-with-laughtrack.webm
+ignore:
+  - '.*'
+  - config.yaml
